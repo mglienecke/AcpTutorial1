@@ -1,0 +1,15 @@
+{
+  "object": {
+    "data": [
+      {
+        "field1": "AAA",
+        "field2": 123
+      },
+      {
+        "field1": "X",
+        "field2": 456,
+        "field3": true
+      }
+    ]
+  }
+}
