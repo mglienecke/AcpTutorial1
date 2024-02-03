@@ -1,13 +1,13 @@
-package uk.ac.ed.inf.ilptutorialrestservice;
+package uk.ac.ed.inf.acptutorial1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class IlpTutorialRestServiceApplication {
+public class AcpTutorial1RestServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IlpTutorialRestServiceApplication.class, args);
+		SpringApplication.run(AcpTutorial1RestServiceApplication.class, args);
 	}
 
 }

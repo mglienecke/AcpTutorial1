@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilptutorialrestservice.data;
+package uk.ac.ed.inf.acptutorial1.data;
 
 public class Tuple {
     private String item1;

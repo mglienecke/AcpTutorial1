@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilptutorialrestservice.data;
+package uk.ac.ed.inf.acptutorial1.data;
 
 /**
  * defines a point using longitude @lng and latitude @lat

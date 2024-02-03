@@ -1,11 +1,9 @@
-package uk.ac.ed.inf.ilptutorialrestservice;
+package uk.ac.ed.inf.acptutorial1;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import org.springframework.boot.SpringApplication;
-import uk.ac.ed.inf.ilptutorialrestservice.data.Restaurant;
+import uk.ac.ed.inf.acptutorial1.data.Restaurant;
 
-import java.io.Console;
 import java.io.IOException;
 import java.net.URL;
 
@@ -20,7 +18,7 @@ public class TestGetClient {
         }
 
         var baseUrl = args[0];
-        if (baseUrl.endsWith("/") == false){
+        if (!baseUrl.endsWith("/")){
             baseUrl += "/";
         }
 

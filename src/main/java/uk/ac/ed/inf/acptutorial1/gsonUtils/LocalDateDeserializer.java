@@ -1,4 +1,4 @@
-package uk.ac.ed.inf.ilptutorialrestservice.gsonUtils;
+package uk.ac.ed.inf.acptutorial1.gsonUtils;
 
 import com.google.gson.*;
 

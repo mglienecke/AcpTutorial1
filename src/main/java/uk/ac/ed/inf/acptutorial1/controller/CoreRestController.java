@@ -1,11 +1,10 @@
-package uk.ac.ed.inf.ilptutorialrestservice.controller;
+package uk.ac.ed.inf.acptutorial1.controller;
 
-import ch.qos.logback.core.joran.sanity.Pair;
 import com.google.gson.Gson;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import uk.ac.ed.inf.ilptutorialrestservice.data.Restaurant;
-import uk.ac.ed.inf.ilptutorialrestservice.data.Tuple;
+import uk.ac.ed.inf.acptutorial1.data.Restaurant;
+import uk.ac.ed.inf.acptutorial1.data.Tuple;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -38,17 +37,6 @@ public class CoreRestController {
     }
 
     /**
-     * simple test method to test the service's availability
-     *
-     * @param input an optional input which will be echoed
-     * @return the echo
-     */
-    @GetMapping(value = {"/testPath/{input}", "/testPath"})
-    public String test(@PathVariable(required = false) String input) {
-        return String.format("Hello from the ILP-Tutorial-REST-Service. Your provided value was: %s", input == null ? "not provided" : input);
-    }
-
-    /**
      * a simple alive check
      *
      * @return true (always)
@@ -60,20 +48,9 @@ public class CoreRestController {
 
 
     /**
-     * GET with HTML result
-     * @return
-     */
-    @RequestMapping(value = "/test", method = RequestMethod.GET, produces = MediaType.TEXT_HTML_VALUE)
-    @ResponseBody
-    public String testHtml() {
-        return "<html>\n" + "<header><title>ILP Tutorial REST Server</title></header>\n" +
-                "<body>\n<h1>" + "Hello from the ILP Tutorial REST Server\n" + "</h1></body>\n" + "</html>";
-    }
-
-    /**
      * POST with a JSON data structure in the request body
-     * @param postAttribute
-     * @return
+     * @param postAttribute is the tuple which was pasted
+     * @return a message constructed from the passed in data
      */
     @PostMapping(value = "/testPostBody",  consumes = {"*/*"})
     public String testPost(@RequestBody Tuple postAttribute) {
@@ -82,9 +59,9 @@ public class CoreRestController {
 
     /**
      * POST with request parameters
-     * @param item1
-     * @param item2
-     * @return
+     * @param item1 is the first item
+     * @param item2 is the second items
+     * @return a combined message
      */
     @PostMapping("/testPostPath")
     public String testPost(@RequestParam("item1") String item1, @RequestParam("item2") String item2) {
