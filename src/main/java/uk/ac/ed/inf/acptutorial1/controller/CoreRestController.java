@@ -68,4 +68,17 @@ public class CoreRestController {
         var postAttribute = new Tuple(item1, item2);
         return "You posted: " + postAttribute.toString();
     }
+
+     @PostMapping("/testPostPath3")
+    public String testPost3(@RequestParam("item1") String item1, @RequestParam(value = "item2", required = false) String item2) {
+        var postAttribute = new Tuple(item1, item2);
+        return "You posted: " + postAttribute.toString();
+    }
+
+
+    @PostMapping("/testPostPath2/{item1}/{item2}")
+    public String testPost2(@PathVariable("item1") String item1, @PathVariable(value = "item2", required = false) String item2) {
+        var postAttribute = new Tuple(item1, item2);
+        return "You posted: " + postAttribute.toString();
+    }
 }
